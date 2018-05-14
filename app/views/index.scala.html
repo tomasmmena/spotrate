@@ -1,0 +1,57 @@
+@()
+
+@main("Welcome to Spotrate") {
+	<div class="main">
+		<h1>Welcome to Spotrate!</h1> 
+
+		<p>This small sample application implements a simple API that takes JSON and XML and returns the rate for a parking spot given a start and end datetimes.</p>
+
+		<h2>Endpoints</h2>
+
+		<h3>POST /api/json</h3>
+
+		<p>This endpoint processes requests submitted as JSON.</p>
+
+		<h4>Example</h4>
+
+		<h5>Request</h5>
+
+		<pre class="demo" lang="javascript"><code>
+{
+	"start": "2018-05-06 11:30:52",
+	"end": "2018-05-06 15:00:03"
+}
+		</code></pre>
+
+		<h5>Response</h5>
+
+		<pre class="demo" lang="javascript"><code>
+{
+    "rate": 2000
+}
+		</code></pre>
+
+		<h3>POST /api/xml</h3>
+
+		<p>This endpoint processes requests submitted as XML.</p>
+
+		<h4>Example</h4>
+
+		<h5>Request</h5>
+
+		<pre class="demo" lang="xml"><code>
+&ltrequest&gt
+	&ltstart&gt2018-05-06 11:30:52&lt/start&gt
+	&ltend&gt2018-05-06 15:00:03&lt/end&gt
+&lt/request&gt
+		</code></pre>
+
+		<h5>Response</h5>
+
+		<pre class="demo" lang="xml"><code>
+&ltresponse&gt
+  &ltrate&gt2000.0&lt/rate&gt
+&lt/response&gt
+		</code></pre>
+	</div>
+}
